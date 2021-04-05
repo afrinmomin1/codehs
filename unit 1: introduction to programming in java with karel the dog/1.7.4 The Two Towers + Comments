@@ -1,0 +1,63 @@
+// Add comments to each of your methods
+public class TwoTowersKarel extends Karel
+{
+	public void run()
+	{
+    	move();
+        buildTower();
+        comeDown();
+        move();
+        move();
+        buildTower();
+        move();
+        turnRight();
+	}
+    /* 
+     * This method is used to turn Karel right
+     * Precondition: Karel should be on the top of the tower,
+     * facing north.
+     * Postcondition: Karel is facing east.
+     */
+    private void turnRight()
+    {
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    }
+    /* 
+     * This method is used to turn Karel to face the opposite direction.
+     * Precondition: Karel is facing north, and should turn to face South.
+     * Postcondition: Karel is facing south.
+     */
+    private void turnAround()
+    {
+        turnLeft();
+        turnLeft();
+    }
+    /* 
+     * This method is used to move Karel down to the first row.
+     * Precondition: Karel is on row four, and should move to row one facing east.
+     * Postcondition: Karel is on the first row facing east.
+     */
+    private void comeDown()
+    {
+        turnAround();
+        move();
+        move();
+        turnLeft();
+    }
+    /* 
+     * This method is used to place three balls in a column
+     * Precondition: Karel has three placed and standing on top of them.
+     * Postcondition: Karel is on top of the column facing east.
+     */
+    private void buildTower()
+    {
+        turnLeft();
+        putBall();
+        move();
+        putBall();
+        move();
+        putBall();
+    }
+}
