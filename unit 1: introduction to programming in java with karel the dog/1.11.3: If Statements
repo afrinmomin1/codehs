@@ -1,0 +1,12 @@
+public class IfStatements extends SuperKarel
+{
+    public void run()
+    {
+        move();
+        
+        if(frontIsClear())
+        {
+            move();
+        }
+    }
+}
