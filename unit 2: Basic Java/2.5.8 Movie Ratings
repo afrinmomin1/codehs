@@ -1,0 +1,11 @@
+public class MovieRatings extends ConsoleProgram
+{
+    public void run()
+    {
+        double movieRating = readDouble("Please enter a movie rating: ");
+        
+        // Round the movieRating to the nearest int and print it out!
+        int roundedRating = (int) (movieRating + 0.5);
+        println("Rating rounded: " + roundedRating);
+    }
+}
