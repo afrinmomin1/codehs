@@ -1,0 +1,10 @@
+public class CastingToInt extends ConsoleProgram
+{
+    public void run()
+    {
+        double x = 3.14;
+        int y = (int)x;
+        
+        println(y);
+    }
+}
