@@ -1,0 +1,16 @@
+public class Poetry extends ConsoleProgram
+{
+    public void run()
+    {
+        System.out.println("Leaves with specks of gold");
+        System.out.println("Gently dance above the Earth");
+        System.out.println("The tree is left bare");
+        System.out.println("Washing");
+        System.out.println("Ashore");
+        System.out.println("Volumes of water");
+        System.out.println("Escape and flow on");
+        System.out.println("Sansy beaches");
+        String userPoem = readLine("Try writing your own poem! ");
+        System.out.println(userPoem);
+    }
+}
