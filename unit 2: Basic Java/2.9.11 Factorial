@@ -1,0 +1,18 @@
+public class Factorial extends ConsoleProgram
+{
+    private static final int MIN = 1;
+    private static final int MAX = 1000;
+    
+    public void run()
+    {
+        int MIN = 1;
+        int MAX = readInt("What number would you like to compute the factorial for? ");
+        int factorial = 1;
+    	for(int i = MIN; i <= MAX; i++)
+    	{
+    		factorial *= i;
+    	}
+    	
+    	System.out.println(factorial);
+    }
+}
