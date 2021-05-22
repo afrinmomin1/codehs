@@ -1,0 +1,13 @@
+public class AddFractions extends ConsoleProgram
+{
+    public void run()
+    {
+        int numOne = readInt("What is the numerator of the first fraction? ");
+        int demOne = readInt("What is the denominator of the first fraction? ");
+        int numTwo = readInt("What is the numerator of the second fraction? ");
+        int demTwo = readInt("What is the denominator of the second fraction? ");
+        int sumNum = numOne * demTwo + demOne * numTwo;
+        int sumDem = demOne * demTwo;
+        System.out.println("The sum of " + numOne + "/" + demOne + " + " + numTwo + "/" + demTwo + " = " + sumNum + "/" + sumDem);
+    }
+}
