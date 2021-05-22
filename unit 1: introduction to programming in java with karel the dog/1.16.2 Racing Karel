@@ -1,0 +1,30 @@
+public class RacingKarel extends SuperKarel
+{
+    public void run()
+    {
+        for(int i = 0; i < 8; i++)
+        {
+            completeLap();
+        }
+    }
+    
+    //method to move Karel one row
+    private void moveOneLane()
+    {
+        while(frontIsClear())
+        {
+            move();
+        }
+        putBall();
+        turnLeft();
+    }
+    
+    //method to have Karel complete one lap
+    private void completeLap()
+    {
+        for(int i = 0; i < 4; i++)
+        {
+            moveOneLane();
+        }
+    }
+}
