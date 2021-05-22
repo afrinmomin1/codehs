@@ -1,0 +1,44 @@
+public class SuperCleanupKarel extends SuperKarel
+{
+    public void run()
+    {
+        oneLaneClean();
+        comeBack();
+        //check if there is a row above
+        while(rightIsClear())
+        {
+            turnRight();
+            move();
+            turnRight();
+            oneLaneClean();
+            comeBack();
+        }
+    }
+    
+    //check the full row for balls and pick them up
+    private void oneLaneClean()
+    {
+        if(ballsPresent())
+        {
+            takeBall();
+        }
+        while(frontIsClear())
+        {
+            move();
+            if(ballsPresent())
+            {
+                takeBall();
+            }
+        }
+    }
+    
+    //come back to the first column of the row
+    private void comeBack()
+    {
+        turnAround();
+        while(frontIsClear())
+        {
+            move();
+        }
+    }
+}
