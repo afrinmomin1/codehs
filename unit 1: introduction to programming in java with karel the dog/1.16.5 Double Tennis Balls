@@ -1,0 +1,49 @@
+public class DoubleTennisBallsKarel extends SuperKarel
+{
+    public void run()
+    {
+        move();
+        doubleBalls();
+        move();
+        moveToSpot();
+        returnToSpot();
+    }
+    
+    //move the balls to the the third column and double them
+    private void doubleBalls()
+    {
+        while(ballsPresent())
+        {
+            takeBall();
+            move();
+            putBall();
+            putBall();
+            turnAround();
+            move();
+            turnAround();
+        }
+    }
+    
+    //move the balls back to the second colum
+    private void moveToSpot()
+    {
+        while(ballsPresent())
+        {
+            takeBall();
+            turnAround();
+            move();
+            putBall();
+            turnAround();
+            move();
+        }
+    }
+    
+    //move Karel to her original spot facing east
+    private void returnToSpot()
+    {
+        turnAround();
+        move();
+        move();
+        turnAround();
+    }
+}
