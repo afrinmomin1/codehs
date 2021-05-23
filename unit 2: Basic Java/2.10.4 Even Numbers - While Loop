@@ -1,0 +1,19 @@
+public class EvensWhile extends ConsoleProgram
+{
+    public void run()
+    {
+        int i = 0;
+        while(i <= 500)
+        {
+            if(i % 2 == 0)
+            {
+                println(i);
+                i++;
+            }
+            else
+            {
+                i++;
+            }
+        }
+    }
+}
