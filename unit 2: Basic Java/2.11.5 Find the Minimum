@@ -1,0 +1,22 @@
+public class FindMinimum extends ConsoleProgram
+{
+    public void run()
+    {
+        int numOne = readInt("First Number: ");
+        int numTwo = readInt("Second Number: ");
+        int numThree = readInt("Third Number: ");
+        
+        if(numOne < numTwo && numOne < numThree)
+        {
+            println(numOne);
+        }
+        else if(numTwo < numOne && numTwo < numThree)
+        {
+            println(numTwo);
+        }
+        else
+        {
+            println(numThree);
+        }
+    }
+}
