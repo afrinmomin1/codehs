@@ -1,0 +1,6 @@
+public String toUpperCase(String str)
+{
+    String out = str.toUpperCase();
+    return out;
+
+}
