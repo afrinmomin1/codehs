@@ -1,0 +1,18 @@
+public boolean allSameLetter(String str)
+{
+    int length = str.length();
+    if(length == 0)
+    {
+        return true;
+    }
+    char c1 = str.charAt(0);
+    for(int i=1;i<length;i++)
+    {
+        char temp = str.charAt(i);
+        if(c1 != temp)
+        {
+            return false;
+        }
+    }
+    return true;
+}
