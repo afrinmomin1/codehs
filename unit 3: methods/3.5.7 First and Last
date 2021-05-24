@@ -1,0 +1,8 @@
+public String firstAndLast(String str)
+{
+    int length = str.length();
+    int l = length - 1;
+    String first = str.substring(0,1);
+    String last = str.substring(l);
+    return first + last;
+}
