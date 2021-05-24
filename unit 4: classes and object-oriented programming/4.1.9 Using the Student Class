@@ -1,3 +1,4 @@
+THIS PART GOES IN FILE... StudentTester.java
 public class StudentTester extends ConsoleProgram
 {
     public void run()
@@ -12,5 +13,25 @@ public class StudentTester extends ConsoleProgram
         // Print out your student object
         System.out.println(emma);
         
+    }
+}
+
+THIS PART GOES IN FILE... Student.java
+public class Student
+{
+    private String firstName;
+    private String lastName;
+    private int gradeLevel;
+    
+    public Student(String fName, String lName, int grade)
+    {
+        firstName = fName;
+        lastName = lName;
+        gradeLevel = grade;
+    }
+    
+    public String toString()
+    {
+        return firstName + " " + lastName + " is in grade: " + gradeLevel;
     }
 }
