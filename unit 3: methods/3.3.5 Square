@@ -1,0 +1,5 @@
+public int square(int x)
+{
+    int total = x * x;
+    return total;
+}
