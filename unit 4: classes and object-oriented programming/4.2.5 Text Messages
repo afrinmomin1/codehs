@@ -1,3 +1,4 @@
+THIS PART GOES IN FILE... Messages.java
 public class Messages extends ConsoleProgram
 {
     public void run()
@@ -6,5 +7,25 @@ public class Messages extends ConsoleProgram
         TextMessage lisa = new TextMessage("Lisa", "Bart", "I'm at school!");
         System.out.println(bart);
         System.out.println(lisa);
+    }
+}
+
+THIS PART GOES IN FILE... TextMessage.java
+public class TextMessage
+{
+    private String message;
+    private String sender;
+    private String receiver;
+    
+    public TextMessage(String from, String to, String theMessage)
+    {
+        sender = from;
+        receiver = to;
+        message = theMessage;
+    }
+    
+    public String toString()
+    {
+        return sender + " texted " + receiver + ": " + message;
     }
 }
