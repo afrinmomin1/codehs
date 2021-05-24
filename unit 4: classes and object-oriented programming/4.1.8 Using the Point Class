@@ -1,3 +1,4 @@
+THIS PART GOES IN FILE... PointTester.java
 public class PointTester extends ConsoleProgram
 {
     public void run()
@@ -12,5 +13,29 @@ public class PointTester extends ConsoleProgram
         Point q = new Point(2, 4);
         // Then print it out
         System.out.println(q);
+    }
+}
+
+THIS PART GOES IN FILE... Point.java
+public class Point
+{
+    private int x;
+    private int y;
+    
+    public Point(int xCoord, int yCoord)
+    {
+        x = xCoord;
+        y = yCoord;
+    }
+    
+    public void move(int dx, int dy)
+    {
+        x += dx;
+        y += dy;
+    }
+    
+    public String toString()
+    {
+        return x + ", " + y;
     }
 }
