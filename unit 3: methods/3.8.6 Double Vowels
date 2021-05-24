@@ -1,0 +1,10 @@
+public String doubleVowel(String str)
+{
+    str = str.replaceAll("a", "aa");
+    str = str.replaceAll("e", "ee");
+    str = str.replaceAll("i", "ii");
+    str = str.replaceAll("o", "oo");
+    str = str.replaceAll("u", "uu");
+    return str;
+    
+}
