@@ -1,0 +1,19 @@
+/**
+     * This returns whether a number is in range.
+     *
+     * @param num The test number
+     * @param min The minimum of the range
+     * @param max The maximum of the range
+     * @return A boolean expression of whether the test number is in range
+     */
+public boolean inRange(int num, int min, int max)
+{
+    if (num <= max && num >= min)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
