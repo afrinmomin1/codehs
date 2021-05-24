@@ -1,3 +1,4 @@
+THIS PART GOES IN FILE... RectangleTester.java
 public class RectangleTester extends ConsoleProgram
 {
     public void run()
@@ -10,5 +11,38 @@ public class RectangleTester extends ConsoleProgram
         System.out.println(rect.getWidth());
         // Print out the area by calling the getArea method
         System.out.println(rect.getArea());
+    }
+}
+
+THIS PART GOES IN FILE... Rectangle.java
+public class Rectangle
+{
+    private int width;
+    private int height;
+    
+    public Rectangle(int rectWidth, int rectHeight)
+    {
+        width = rectWidth;
+        height = rectHeight;
+    }
+    
+    public int getArea()
+    {
+        return width * height;
+    }
+    
+    public int getHeight()
+    {
+        return height;
+    }
+    
+    public int getWidth()
+    {
+        return width;
+    }
+    
+    public String toString()
+    {
+        return "Rectangle with width: " + width + " and height: " + height;
     }
 }
