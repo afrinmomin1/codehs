@@ -1,0 +1,42 @@
+THIS PART GOES IN FILE... SummableTester.java
+public class SummableTester extends ConsoleProgram
+{
+    public void run()
+    {
+        // Start here!
+    }
+}
+
+THIS PART GOES IN FILE... Summable.java
+public interface Summable
+{
+    public int add(Summable other);
+    
+    public int getValue();
+}
+
+THIS PART GOES IN FILE... City.java
+public class City
+{
+    private int population;
+    private String name;
+
+    public City(String name, int population)
+    {
+        this.name = name;
+        this.population = population;
+    }
+    
+    public int getValue(){
+        return this.population;
+    }
+    
+    public String getName()
+    {
+        return this.name;
+    }
+    
+    public int add(City other){
+        return getValue() + other.getValue();
+    }
+}
