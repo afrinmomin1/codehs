@@ -1,0 +1,49 @@
+THIS PART GOES IN FILE... RectangleTester.java
+public class RectangleTester extends ConsoleProgram
+{
+    public void run()
+    {
+        Rectangle r1 = new Rectangle(10, 2);
+        System.out.println(r1);
+        
+        System.out.println("Perimeter of r1: " + r1.getPerimeter());
+    }
+}
+
+THIS PART GOES IN FILE... Rectangle.java
+public class Rectangle
+{
+    private int width;
+    private int height;
+    
+    public Rectangle(int rectWidth, int rectHeight)
+    {
+        width = rectWidth;
+        height = rectHeight;
+    }
+    
+    public int getArea()
+    {
+        return width * height;
+    }
+    
+    public int getPerimeter()
+    {
+        return (width*2) + (height*2);
+    }
+    
+    public int getHeight()
+    {
+        return height;
+    }
+    
+    public int getWidth()
+    {
+        return width;
+    }
+    
+    public String toString()
+    {
+        return "Rectangle with width: " + width + " and height: " + height;
+    }
+}
