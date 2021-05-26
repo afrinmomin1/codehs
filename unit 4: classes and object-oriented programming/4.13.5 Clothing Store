@@ -1,0 +1,68 @@
+THIS PART GOES IN FILE... Jeans.java
+public class Jeans extends Clothing
+{
+    public Jeans(String aSize)
+    {
+        super(aSize, "blue");
+    }
+}
+
+THIS PART GOES IN FILE... Clothing.java
+public class Clothing
+{
+    private String size;
+    private String color;
+    
+    public Clothing(String aSize, String aColor)
+    {
+        size = aSize;
+        color = aColor;
+    }
+    public String getSize()
+    {
+        return size;
+    }
+    public String getColor()
+    {
+        return color;
+    }
+}
+
+THIS PART GOES IN FILE... Sweatshirt.java
+public class Sweatshirt extends Clothing
+{
+    private boolean hood;
+    public Sweatshirt(String aSize, String aColor, boolean hasHood)
+    {
+        super(aSize, aColor);
+        hood = hasHood;
+    }
+    public boolean hasHood()
+    {
+        return hood;
+    }
+}
+
+THIS PART GOES IN FILE... ClothingTester.java
+public class ClothingTester extends ConsoleProgram
+{
+    public void run()
+    {
+        
+    }
+}
+
+THIS PART GOES IN FILE... TShirt.java
+public class TShirt extends Clothing
+{
+    private String fabric;
+    public TShirt(String aSize, String aColor, String aFabric)
+    {
+        super(aSize, aColor);
+        fabric = aFabric;
+    }
+    public String getFabric()
+    {
+        return fabric;
+    }
+}
