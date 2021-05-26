@@ -1,0 +1,45 @@
+THIS PART GOES IN FILE... Messages.java
+public class Messages extends ConsoleProgram
+{
+    public void run()
+    {
+        TextMessage first = new TextMessage("Alan", "Abby", "hello");
+        TextMessage second = new TextMessage("Abby", "Alan", "hi :)");
+        System.out.println(first);
+        System.out.println(second);
+    }
+}
+
+THIS PART GOES IN FILE... TextMessage.java
+public class TextMessage
+{
+    private String message;
+    private String sender;
+    private String receiver;
+    
+    public TextMessage(String from, String to, String theMessage)
+    {
+        sender = from;
+        receiver = to;
+        message = theMessage;
+    }
+    
+    public String getSender()
+    {
+        return sender;
+    }
+    
+    public String getReceiver()
+    {
+        return receiver;
+    }
+    public String getMessage()
+    {
+        return message;
+    }
+    
+    public String toString()
+    {
+        return sender + " texted " + receiver + ": " + message;
+    }
+}
