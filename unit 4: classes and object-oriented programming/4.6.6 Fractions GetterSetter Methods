@@ -1,0 +1,46 @@
+THIS PART GOES IN FILE... FractionTester.java
+public class FractionTester extends ConsoleProgram
+{
+    public void run()
+    {
+        
+    }
+}
+
+THIS PART GOES IN FILE... Fraction.java
+public class Fraction
+{
+    private int numerator;
+    private int denominator;
+    
+    public Fraction(int inumerator, int idenominator)
+    {
+        numerator = inumerator;
+        denominator = idenominator;
+    }
+    
+    public int getNumerator()
+    {
+        return numerator;
+    }
+    
+    public int getDenominator()
+    {
+        return denominator;
+    }
+    
+    public void setNumerator(int x)
+    {
+        numerator = x;
+    }
+    
+    public void setDenominator(int x)
+    {
+        denominator = x;
+    }
+    
+    public String toString()
+    {
+        return numerator + "/" + denominator;
+    }
+}
