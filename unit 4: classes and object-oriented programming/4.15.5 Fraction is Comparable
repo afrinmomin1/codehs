@@ -1,0 +1,40 @@
+THIS PART GOES IN FILE... Fraction.java
+public class Fraction implements Comparable<Fraction>
+{
+    private double frac;
+    
+    public Fraction(int numerator, int denominator){
+        frac = (double)numerator / denominator;
+    }
+    
+    public double getFrac()
+    {
+        return frac;
+    }
+    
+    public int compareTo(Fraction other)
+    {
+        double diff = getFrac() - other.getFrac();
+        return (int)Math.signum(diff);
+    }
+    
+    public boolean equals(Object other){
+        if (other instanceof Fraction && this.compareTo((Fraction)other) == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+
+THIS PART GOES IN FILE... FractionTester.java
+public class FractionTester extends ConsoleProgram
+{
+    public void run()
+    {
+        // Start here!
+    }
+}
