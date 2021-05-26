@@ -1,3 +1,14 @@
+THIS PART GOES IN FILE DogTester.java
+public class DogTester extends ConsoleProgram
+{
+    public void run()
+    {
+        Dog golden = new Dog("Golden Retriever", "Sammy");
+        System.out.println(golden);
+    }
+}
+
+THIS PART GOES IN FILE... Dog.java
 public class Dog 
 {
     private String breed;
