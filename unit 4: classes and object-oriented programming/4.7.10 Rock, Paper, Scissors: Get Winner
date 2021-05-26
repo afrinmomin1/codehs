@@ -1,0 +1,71 @@
+THIS PART GOES IN FILE... Scratchpad.java
+/* This is the Scratchpad!
+This file is not graded, but you can use it to test your code.
+
+You can write and test your method in the Scratchpad, but make
+sure to copy and paste it into the Unit Test file before checking
+your answer. Remember to only copy and paste the method you want
+to submit, not all of your tests.
+*/
+
+public class Scratchpad extends ConsoleProgram
+{
+    public void run()
+    {
+        System.out.println(getWinner("rock", "paper"));
+    }
+
+    // Copy and paste your Unit Test method here
+    private String getWinner(String user, String computer)
+    {
+        // Return the proper string for the result.
+        String USER_PLAYER = "User wins!";
+        String COMPUTER_PLAYER = "Computer wins!";
+        String TIE = "Tie";
+    
+        // Your code here
+        if(user.equals(computer))
+        return TIE;
+        else if(user.equals("rock") && computer.equals("paper"))
+        return COMPUTER_PLAYER;
+        else if(user.equals("rock") && computer.equals("scissors"))
+        return USER_PLAYER;
+        else if(user.equals("scissors") && computer.equals("rock"))
+        return COMPUTER_PLAYER;
+        else if(user.equals("scissors") && computer.equals("paper"))
+        return USER_PLAYER;
+        else if(user.equals("paper") && computer.equals("scissors"))
+        return COMPUTER_PLAYER;
+        else if(user.equals("paper") && computer.equals("rock"))
+        return USER_PLAYER;
+        else
+        return TIE;
+    }
+}
+
+THIS PART GOES IN FILE... Unit Test
+private String getWinner(String user, String computer)
+{
+    // Return the proper string for the result.
+    String USER_PLAYER = "User wins!";
+    String COMPUTER_PLAYER = "Computer wins!";
+    String TIE = "Tie";
+
+    // Your code here
+    if(user.equals(computer))
+    return TIE;
+    else if(user.equals("rock") && computer.equals("paper"))
+    return COMPUTER_PLAYER;
+    else if(user.equals("rock") && computer.equals("scissors"))
+    return USER_PLAYER;
+    else if(user.equals("scissors") && computer.equals("rock"))
+    return COMPUTER_PLAYER;
+    else if(user.equals("scissors") && computer.equals("paper"))
+    return USER_PLAYER;
+    else if(user.equals("paper") && computer.equals("scissors"))
+    return COMPUTER_PLAYER;
+    else if(user.equals("paper") && computer.equals("rock"))
+    return USER_PLAYER;
+    else
+    return TIE;
+}
