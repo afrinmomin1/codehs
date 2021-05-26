@@ -1,3 +1,14 @@
+THIS PART GOES IN FILE... FlowerTester.java
+public class FlowerTester extends ConsoleProgram
+{
+    public void run()
+    {
+        Flower foxglove = new Flower("Foxglove", "Red", "Digitalis", "obscura");
+        System.out.println(foxglove);
+    }
+}
+
+THIS PART GOES IN FILE... Flower.java
 public class Flower
 {
 
