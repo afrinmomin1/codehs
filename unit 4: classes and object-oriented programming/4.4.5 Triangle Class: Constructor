@@ -1,3 +1,18 @@
+THIS PART GOES IN FILE...TriangleTester.java
+public class TriangleTester extends ConsoleProgram
+{
+    public void run()
+    {
+        // Write the Triangle constructor in the Triangle class
+        // and test out creating new Triangle objects here!
+        
+        // For example:
+        Triangle testTriangle = new Triangle(5, 3);
+        System.out.println(testTriangle);
+    }
+}
+
+THIS PART GOES IN FILE...Triangle.java
 public class Triangle
 {
     private double height;
