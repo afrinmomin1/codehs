@@ -1,0 +1,111 @@
+THIS PART GOES IN FILE... RockPaperScissors.java
+public class RockPaperScissors extends ConsoleProgram
+{
+    private static final String USER_PLAYER = "User wins!";
+    private static final String COMPUTER_PLAYER = "Computer wins!";
+    private static final String TIE = "Tie";
+        
+    private String getWinner(String user, String computer)
+    {
+        if(user.equals(computer))
+        return TIE;
+        else if(user.equals("rock") && computer.equals("paper"))
+        return COMPUTER_PLAYER;
+        else if(user.equals("rock") && computer.equals("scissors"))
+        return USER_PLAYER;
+        else if(user.equals("scissors") && computer.equals("rock"))
+        return COMPUTER_PLAYER;
+        else if(user.equals("scissors") && computer.equals("paper"))
+        return USER_PLAYER;
+        else if(user.equals("paper") && computer.equals("scissors"))
+        return COMPUTER_PLAYER;
+        else if(user.equals("paper") && computer.equals("rock"))
+        return USER_PLAYER;
+        else
+        return TIE;
+    }
+    
+    public void run()
+    {
+        while(true)
+        {
+            String userInput = readLine("Enter your choice (rock, paper, scissors) : ");
+            if(userInput.equals(""))
+            {
+                break;
+            }
+            else
+            {
+                int randomNum = Randomizer.nextInt(1, 3);
+                String compInput;
+                if(randomNum == 1){
+                    compInput = "rock";
+                }
+                else if(randomNum == 2)
+                {
+                    compInput = "paper";
+                }
+                else
+                {
+                    compInput = "scissors";
+                }
+            
+                System.out.println("User: " + userInput);
+                System.out.println("Computer: " + compInput);
+                System.out.println(getWinner(userInput, compInput));
+            }
+        }
+        System.out.println("Thanks for playing!");
+    }
+    
+}
+
+THIS PART GOES IN FILE... Randomizer.java
+import java.util.*;
+
+public class Randomizer{
+
+	public static Random theInstance = null;
+	
+	public Randomizer(){
+		
+	}
+	
+	public static Random getInstance(){
+		if(theInstance == null){
+			theInstance = new Random();
+		}
+		return theInstance;
+	}
+	
+	public static boolean nextBoolean(){
+		return Randomizer.getInstance().nextBoolean();
+	}
+
+	public static boolean nextBoolean(double probability){
+		return Randomizer.nextDouble() < probability;
+	}
+	
+	public static int nextInt(){
+		return Randomizer.getInstance().nextInt();
+	}
+
+	public static int nextInt(int n){
+		return Randomizer.getInstance().nextInt(n);
+	}
+
+	/* Return a nubmer between min and max, inclusive. */
+	public static int nextInt(int min, int max){
+		return min + Randomizer.nextInt(max - min + 1);
+	}
+
+	public static double nextDouble(){
+		return Randomizer.getInstance().nextDouble();
+	}
+
+	public static double nextDouble(double min, double max){
+		return min + (max - min) * Randomizer.nextDouble();
+	}
+
+	
+}
